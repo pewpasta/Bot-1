@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PlaceNL Bot
+// @name         IndiaPlace Bot
 // @namespace    https://github.com/pewpasta/Bot-1
 // @version      20
 // @description  Bot for r/IndiaPlace!
