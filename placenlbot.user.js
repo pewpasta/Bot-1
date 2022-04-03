@@ -142,7 +142,7 @@ function connectSocket() {
         switch (data.type.toLowerCase()) {
             case 'map':
                 Toastify({
-                    text: `Nieuwe map laden (reden: ${data.reason ? data.reason : 'connected to server'})...`,
+                    text: `Load new map (reden: ${data.reason ? data.reason : 'connected to server'})...`,
                     duration: DEFAULT_TOAST_DURATION_MS
                 }).showToast();
                 currentOrderCtx = await getCanvasFromUrl(`https://commando.burgmoment.repl.co/maps/${data.data}`, currentOrderCanvas, 0, 0, true);
@@ -232,7 +232,7 @@ async function attemptPlace() {
             const delay = nextPixelDate.getTime() - Date.now();
             const toast_duration = delay > 0 ? delay : DEFAULT_TOAST_DURATION_MS;
             Toastify({
-                text: `Pixel te snel geplaatst! Volgende pixel wordt geplaatst om ${nextPixelDate.toLocaleTimeString()}.`,
+                text: `Pixel posted too soon! Next pixel will be placed at ${nextPixelDate.toLocaleTimeString()}.`,
                 duration: toast_duration
             }).showToast();
             setTimeout(attemptPlace, delay);
