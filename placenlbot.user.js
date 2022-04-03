@@ -94,12 +94,12 @@ let getPendingWork = (work, rgbaOrder, rgbaCanvas) => {
     currentPlaceCanvas = document.body.appendChild(currentPlaceCanvas);
 
     Toastify({
-        text: 'Accesstoken ophalen...',
+        text: 'Getting access token...',
         duration: DEFAULT_TOAST_DURATION_MS
     }).showToast();
     accessToken = await getAccessToken();
     Toastify({
-        text: 'Accesstoken opgehaald!',
+        text: 'Access token collected!',
         duration: DEFAULT_TOAST_DURATION_MS
     }).showToast();
 
@@ -116,7 +116,7 @@ let getPendingWork = (work, rgbaOrder, rgbaCanvas) => {
 
 function connectSocket() {
     Toastify({
-        text: 'Verbinden met PlaceNL server...',
+        text: 'Connecting to IndiaPlace server...',
         duration: DEFAULT_TOAST_DURATION_MS
     }).showToast();
 
@@ -124,7 +124,7 @@ function connectSocket() {
 
     socket.onopen = function () {
         Toastify({
-            text: 'Verbonden met PlaceNL server!',
+            text: 'Connected to IndiaPlace server!',
             duration: DEFAULT_TOAST_DURATION_MS
         }).showToast();
         socket.send(JSON.stringify({ type: 'getmap' }));
