@@ -1,6 +1,6 @@
 
 
-# PlaceNL Bot (English)
+# IndiaPlace Bot (English)
 
 The bot for IndiaPlace and their allies!.
 
